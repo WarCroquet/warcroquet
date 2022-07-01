@@ -1,8 +1,5 @@
 #  WAR-CROQUET
 
-## Figma design
-[Figma link](https://www.figma.com/file/T0fUjHwMEnP6aqKbtgzljP/WarCroquet?node-id=2%3A39)
-
 ## Setup
 
 Make sure to install the dependencies:
