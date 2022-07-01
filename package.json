@@ -5,10 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "root-static": "mkdir docs && cp -R .output/public ./docs",
-    "add-static": "git add . && git commit -m \"new static page deploy\"",
-    "clean": "rm -rf docs",
-    "deploy": "npm run generate && npm run root-static && npm run add-static && git subtree push --prefix .output/public origin gh-pages && npm run clean"
+    "deploy": "npm run generate && cp -R ./gfx ./.output/public/gfx  && git subtree push --prefix .output/public origin gh-pages"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.3",
