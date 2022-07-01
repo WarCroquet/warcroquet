@@ -4,10 +4,14 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   mode: 'spa',
+  fallback: '404.html',
   tailwindcss: {
     // Options
   },
-  router: {
-    base: '/warcroquet/'
+  purgeCSS: {
+    enabled: false
+  },
+  build: {
+    publicPath: "./_nuxt"
   }
 })
