@@ -4,10 +4,10 @@
       <img src="/gfx/login-logo.png">
     </div>
     <div class="link">
-      <NuxtLink to="game" class="btn btn-yellow">JOIN GAME</NuxtLink>
+      <NuxtLink to="createGame" class="btn btn-yellow">CREATE GAME</NuxtLink>
     </div>
     <div class="link">
-      <NuxtLink to="game" class="btn btn-yellow">CREATE GAME</NuxtLink>
+      <NuxtLink to="joinGame" class="btn btn-yellow">JOIN GAME</NuxtLink>
     </div>
     <div class="link">
       <NuxtLink to="rules" class="btn btn-yellow">RULES</NuxtLink>

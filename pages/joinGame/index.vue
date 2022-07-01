@@ -6,6 +6,8 @@
     <template #footer>
       <div class="link">
         <NuxtLink to="game" class="btn btn-yellow">JOIN GAME</NuxtLink>
+        <p>Message is: {{ message }}</p>
+	      <input v-model="message" placeholder="edit me" />
       </div>
     </template>
   </LayoutMain>
