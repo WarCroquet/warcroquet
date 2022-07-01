@@ -1,7 +1,7 @@
 <template>
   <div class="menu flex flex-col">
     <div class="logo">
-      <img src="gfx/login-logo.png">
+      <img src="/gfx/login-logo.png">
     </div>
     <div class="link">
       <NuxtLink to="game" class="btn btn-yellow">JOIN GAME</NuxtLink>

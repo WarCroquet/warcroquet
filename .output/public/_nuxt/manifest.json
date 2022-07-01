@@ -1,0 +1,48 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-79b95e12.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/about/index.vue",
+      "pages/game/index.vue",
+      "pages/index.vue",
+      "pages/rules/index.vue"
+    ],
+    "css": [
+      "entry.98ec0794.css"
+    ]
+  },
+  "pages/about/index.vue": {
+    "file": "index-89074a8e.mjs",
+    "src": "pages/about/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/game/index.vue": {
+    "file": "index-e46ece7e.mjs",
+    "src": "pages/game/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-877c174b.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/rules/index.vue": {
+    "file": "index-df599ca0.mjs",
+    "src": "pages/rules/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  }
+}

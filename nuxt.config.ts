@@ -6,5 +6,8 @@ export default defineNuxtConfig({
   mode: 'spa',
   tailwindcss: {
     // Options
+  },
+  router: {
+    base: '/warcroquet/'
   }
 })
