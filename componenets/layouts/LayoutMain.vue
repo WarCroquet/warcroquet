@@ -3,9 +3,13 @@
     <div class="logo">
       <div>
         <img src="/gfx/logo.png"/>
+        
       </div>
     </div>
     <div class="content">
+      <div class="headerText">
+        <slot name="headerText"/>
+      </div>
       <main class="main-content">
         <slot/>
       </main>
@@ -20,13 +24,18 @@
   @apply flex justify-center my-5;
 }
 .content {
-  @apply m-10;
+  @apply ml-10 mr-10 mb-10;
   .footer {
 
   }
 
   .main-content {
 
+    @apply text-white;
+  }
+
+  .headerText{
+    @apply pb-10;
   }
 }
 

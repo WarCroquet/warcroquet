@@ -1,24 +1,35 @@
 <template>
-  <div>
-    <p>
-      Created by the HTX Bois.
+<LayoutMain>
+    <template #headerText>
+      <h3 class="text-green-1100 text-center font-bold text-lg">INFORMATION</h3>
+      <h2 class="white font-bold text-2xl">ABOUT WARCROQUET</h2>
+    </template> 
+  
+   
+      <p class="text-center">Created by the HTX Bois.</p><br/>
 
-      Erik Thomsen aka "Den sleske"
-      Jacob Anneberg Sørensen aka "Mr. Jetset"
-      Jonas Niaraki Jensen aka "Swahili"
-      Marcus Astrup Hansen aka "Tarzan wannabe"
-      Mikkel Fjord Olsen aka "Brøleabe"
-      Sigurd Eugen Espersen aka "TT"
-      Toke Rosenbæk Andersen aka "Tokxic"
-      Troels Zink Kristensen aka "Tics boy 2000"
+      <ul class="text-sm">
+        <li class="text-center">Erik Thomsen aka "Den sleske"</li>
+        <li class="text-center">Jacob Anneberg Sørensen aka "Mr. Jetset"</li>
+        <li class="text-center">Jonas Niaraki Jensen aka "Swahili"</li>
+        <li class="text-center">Marcus Astrup Hansen aka "Tarzan wannabe"</li>
+        <li class="text-center">Mikkel Fjord Olsen aka "Brøleabe"</li>
+        <li class="text-center">Sigurd Eugen Espersen aka "TT"</li>
+        <li class="text-center">Toke Rosenbæk Andersen aka "Tokxic"</li>
+        <li class="text-center"> Troels Zink Kristensen aka "Tics boy 2000"</li>
+      </ul><br/>
+     
+      <p class="text-center">Copyright © 2022</p><br/>
 
-      Copyright © 2022
-    </p>
-  </div>
+
+      <button class="btn-yellow" @click="$router.go(-1)">Return</button>
+   
+   
+  </LayoutMain>
 </template>
 
-<script lang="ts">
-
+<script setup lang="ts">
+import LayoutMain from '/componenets/layouts/LayoutMain.vue'
 </script>
 
 <style lang="scss">
