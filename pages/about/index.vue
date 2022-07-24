@@ -21,8 +21,14 @@
      
       <p class="text-center">Copyright © 2022</p><br/>
 
+      <playerTemplate playerColor="52ED6B" playerClass="shaman" playerName="PLAYER 4" />
 
-      <button class="btn-yellow" @click="$router.go(-1)">Return</button>
+      <div class="flex items-center justify-center mt-auto">
+        
+        <button class="btn-yellow " @click="$router.go(-1)">Return</button>
+      
+      </div>
+     
    
    
   </LayoutMain>
@@ -30,6 +36,7 @@
 
 <script setup lang="ts">
 import LayoutMain from '/componenets/layouts/LayoutMain.vue'
+import playerTemplate from '/componenets/layouts/playerTemplate.vue'
 </script>
 
 <style lang="scss">
