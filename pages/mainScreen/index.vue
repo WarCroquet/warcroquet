@@ -45,6 +45,7 @@
   <div class="flex flex-wrap justify-center">
     <button class="btn btn-yellow-ability">STUN</button>
     <button class="btn btn-yellow-ability">CD</button>
+    <button class="btn btn-yellow-ability">NEXT</button>
   </div>
 
 
