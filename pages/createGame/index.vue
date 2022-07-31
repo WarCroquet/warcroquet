@@ -21,15 +21,15 @@ import {someLogic} from '~/logic/main'
 import { ref } from 'vue'
 
 
-function makeNumberArray() {
-  var array = []
-  for (int i = 1; i < 21; i++) {
-    array.push(i);
-  }
-  return array;
-}
+// function makeNumberArray() {
+//   var array = [];
+//   for (int i = 1; i < 21; i++) {
+//     array.push(i);
+//   }
+//   return array;
+// }
 
-const numbers = ref(makeNumberArray())
+// const numbers = ref(makeNumberArray())
 
 
 const someFunc = async () => {
