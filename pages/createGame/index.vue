@@ -31,7 +31,7 @@ import { someLogic } from '~/logic/main'
 import { ref } from 'vue'
 
 
-// function makeNumberArray() {
+// function makeNumberArray() { Erik kan pushe
 //   var array = [];
 //   for (int i = 1; i < 21; i++) {
 //     array.push(i);
