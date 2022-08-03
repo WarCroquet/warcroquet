@@ -14,4 +14,7 @@ export default defineNuxtConfig({
   build: {
     publicPath: "./_nuxt"
   },
+  baseURL: 'https://warcroquet.github.io/'
+
+
 })
