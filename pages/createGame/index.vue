@@ -26,6 +26,7 @@ import { ref } from 'vue'
 const numberOfPlayers = ref(0)
 const allowedNumberOfPlayers = ref([1,2,3,4,5,6,7,8])
 
+
 const someFunc = async () => {
   console.log(await someLogic())
 }
