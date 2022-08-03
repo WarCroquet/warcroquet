@@ -5,14 +5,15 @@
 
     <select class="select" v-model.number="numberOfPlayers">
       <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
-      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{playerNum}} Player{{playerNum > 0 ? 's' : ''}}</option>
+      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{ playerNum }} Player{{ playerNum > 1 ?
+          's' :
+          ''
+      }}</option>
     </select>
-
-    <!-- <v-select v-model="select" :items="fluit" item-text="id" item-value="name" label="Select" @input="doSomething" return-object/> -->
 
     <template #footer>
       <div class="link">
-        <NuxtLink :to="{name: 'createPlayers', query: { numberOfPlayers }}" class="btn btn-yellow">NEXT</NuxtLink>
+        <NuxtLink :to="{ name: 'createPlayers', query: { numberOfPlayers } }" class="btn btn-yellow">NEXT</NuxtLink>
       </div>
     </template>
   </LayoutMain>
@@ -24,7 +25,7 @@ import { someLogic } from '~/logic/main'
 import { ref } from 'vue'
 
 const numberOfPlayers = ref(0)
-const allowedNumberOfPlayers = ref([1,2,3,4,5,6,7,8])
+const allowedNumberOfPlayers = ref([1, 2, 3, 4, 5, 6, 7, 8])
 
 
 const someFunc = async () => {

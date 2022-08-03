@@ -1,11 +1,11 @@
 <template>
   <LayoutMain>
     <h3>NEW GAME</h3>
-    <h2 @click="someFunc">PLAYER 1 DATA</h2>
-    <h3>TOTAL PLAYERS {{numberOfPlayers}}</h3>
+    <h2 @click="someFunc">Player 1 of {{ numberOfPlayers }}</h2>
+
     <p>Class:</p>
     <select class="select">
-      <option disabled="disabled" selected="selected" value="">Select class</option>
+      <option disabled selected>Select class</option>
       <option>Druid</option>
       <option>Death Knight</option>
       <option>Hunter</option>
@@ -23,14 +23,12 @@
 
     <p>Color:</p>
     <select class="select">
-      <option disabled="disabled" selected="selected" value="">Select color</option>
+      <option disabled selected value="">Select color</option>
       <option>Red</option>
       <option>Yellow</option>
       <option>Green</option>
       <option>Black</option>
     </select><br /><br />
-
-    <!-- <v-select v-model="select" :items="fluit" item-text="id" item-value="name" label="Select" @input="doSomething" return-object/> -->
 
     <template #footer>
       <div class="link">
