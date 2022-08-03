@@ -1,25 +1,40 @@
 <template>
   <LayoutMain>
     <h3>NEW GAME</h3>
-    <h2 @click="someFunc">NUMBER OF PLAYERS</h2>
+    <h2 @click="someFunc">PLAYER 1 DATA</h2>
 
+    <p>Class:</p>
     <select class="select">
-      <option disabled="disabled" selected="selected" value="">Select players</option>
-      <option value="1">1 Player</option>
-      <option value="2">2 Players</option>
-      <option value="3">3 Players</option>
-      <option value="4">4 Players</option>
-      <option value="5">5 Players</option>
-      <option value="6">6 Players</option>
-      <option value="7">7 Players</option>
-      <option value="8">8 Players</option>
-    </select>
+      <option disabled="disabled" selected="selected" value="">Select class</option>
+      <option>Druid</option>
+      <option>Death Knight</option>
+      <option>Hunter</option>
+      <option>Mage</option>
+      <option>Paladin</option>
+      <option>Priest</option>
+      <option>Rogue</option>
+      <option>Shaman</option>
+      <option>Warlock</option>
+      <option>Warrior</option>
+    </select><br /><br />
+
+    <p>Player name:</p>
+    <input style="color:black"><br /><br />
+
+    <p>Color:</p>
+    <select class="select">
+      <option disabled="disabled" selected="selected" value="">Select color</option>
+      <option>Red</option>
+      <option>Yellow</option>
+      <option>Green</option>
+      <option>Black</option>
+    </select><br /><br />
 
     <!-- <v-select v-model="select" :items="fluit" item-text="id" item-value="name" label="Select" @input="doSomething" return-object/> -->
 
     <template #footer>
       <div class="link">
-        <NuxtLink to="createPlayers" class="btn btn-yellow">NEXT</NuxtLink>
+        <NuxtLink to="game" class="btn btn-yellow">CREATE PLAYER</NuxtLink>
       </div>
     </template>
   </LayoutMain>
@@ -57,13 +72,6 @@ h2 {
 }
 
 .select {
-  color: black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-select .option {
   color: black;
 }
 </style>

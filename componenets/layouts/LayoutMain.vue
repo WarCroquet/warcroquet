@@ -2,19 +2,19 @@
   <div>
     <div class="logo">
       <div>
-        <img src="/gfx/logo.png"/>
-        
+        <img src="~/assets/logo.png" />
+
       </div>
     </div>
     <div class="content">
       <div class="headerText">
-        <slot name="headerText"/>
+        <slot name="headerText" />
       </div>
       <main class="main-content">
-        <slot/>
+        <slot />
       </main>
       <footer>
-        <slot name="footer"/>
+        <slot name="footer" />
       </footer>
     </div>
   </div>
@@ -23,21 +23,19 @@
 .logo {
   @apply flex justify-center my-5;
 }
+
 .content {
   @apply ml-10 mr-10 mb-10;
-  .footer {
 
-  }
+  .footer {}
 
   .main-content {
 
     @apply text-white;
   }
 
-  .headerText{
+  .headerText {
     @apply pb-10;
   }
 }
-
-
 </style>
