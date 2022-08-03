@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-e01419c4.mjs",
+    "file": "entry-4945a9e1.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -22,27 +22,27 @@
     ]
   },
   "pages/about/index.vue": {
-    "file": "index-82267f1b.mjs",
+    "file": "index-edf98298.mjs",
     "src": "pages/about/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_LayoutMain-212e62fa.mjs",
+      "_LayoutMain-c51384ef.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_LayoutMain-212e62fa.mjs": {
-    "file": "LayoutMain-212e62fa.mjs",
+  "_LayoutMain-c51384ef.mjs": {
+    "file": "LayoutMain-c51384ef.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/createGame/index.vue": {
-    "file": "index-fbcd0a06.mjs",
+    "file": "index-5322138d.mjs",
     "src": "pages/createGame/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-212e62fa.mjs",
+      "_LayoutMain-c51384ef.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
@@ -50,17 +50,17 @@
     "file": "main-47dfe43e.mjs"
   },
   "pages/createPlayers/index.vue": {
-    "file": "index-83433596.mjs",
+    "file": "index-0e261654.mjs",
     "src": "pages/createPlayers/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-212e62fa.mjs",
+      "_LayoutMain-c51384ef.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-bbcd24c3.mjs",
+    "file": "index-0e74136c.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -68,17 +68,17 @@
     ]
   },
   "pages/joinGame/index.vue": {
-    "file": "index-c1cc89e7.mjs",
+    "file": "index-364bf4ee.mjs",
     "src": "pages/joinGame/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-212e62fa.mjs",
+      "_LayoutMain-c51384ef.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
   "pages/mainScreen/index.vue": {
-    "file": "index-8a12e142.mjs",
+    "file": "index-7e5ae0bc.mjs",
     "src": "pages/mainScreen/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -86,11 +86,11 @@
     ]
   },
   "pages/rules/index.vue": {
-    "file": "index-2d8533ed.mjs",
+    "file": "index-ce2a1040.mjs",
     "src": "pages/rules/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_LayoutMain-212e62fa.mjs",
+      "_LayoutMain-c51384ef.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   }
