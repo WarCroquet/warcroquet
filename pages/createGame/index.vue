@@ -3,23 +3,16 @@
     <h3>NEW GAME</h3>
     <h2 @click="someFunc">NUMBER OF PLAYERS</h2>
 
-    <select class="select">
-      <option disabled="disabled" selected="selected" value="">Select players</option>
-      <option value="1">1 Player</option>
-      <option value="2">2 Players</option>
-      <option value="3">3 Players</option>
-      <option value="4">4 Players</option>
-      <option value="5">5 Players</option>
-      <option value="6">6 Players</option>
-      <option value="7">7 Players</option>
-      <option value="8">8 Players</option>
+    <select class="select" v-model.number="numberOfPlayers">
+      <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
+      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{playerNum}} Player{{playerNum > 0 ? 's' : ''}}</option>
     </select>
 
     <!-- <v-select v-model="select" :items="fluit" item-text="id" item-value="name" label="Select" @input="doSomething" return-object/> -->
 
     <template #footer>
       <div class="link">
-        <NuxtLink to="createPlayers" class="btn btn-yellow">NEXT</NuxtLink>
+        <NuxtLink :to="{name: 'createPlayers', query: { numberOfPlayers }}" class="btn btn-yellow">NEXT</NuxtLink>
       </div>
     </template>
   </LayoutMain>
@@ -30,23 +23,13 @@ import LayoutMain from '~/componenets/layouts/LayoutMain'
 import { someLogic } from '~/logic/main'
 import { ref } from 'vue'
 
-
-// function makeNumberArray() {
-//   var array = [];
-//   for (int i = 1; i < 21; i++) {
-//     array.push(i);
-//   }
-//   return array;
-// }
-
-// const numbers = ref(makeNumberArray())
-
+const numberOfPlayers = ref(0)
+const allowedNumberOfPlayers = ref([1,2,3,4,5,6,7,8])
 
 const someFunc = async () => {
   console.log(await someLogic())
 }
-</script>'
-
+</script>
 <style lang="scss">
 h3 {
   @apply text-green-1100 text-center font-bold text-lg;

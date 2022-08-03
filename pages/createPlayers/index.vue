@@ -2,7 +2,7 @@
   <LayoutMain>
     <h3>NEW GAME</h3>
     <h2 @click="someFunc">PLAYER 1 DATA</h2>
-
+    <h3>TOTAL PLAYERS {{numberOfPlayers}}</h3>
     <p>Class:</p>
     <select class="select">
       <option disabled="disabled" selected="selected" value="">Select class</option>
@@ -45,16 +45,9 @@ import LayoutMain from '~/componenets/layouts/LayoutMain'
 import { someLogic } from '~/logic/main'
 import { ref } from 'vue'
 
+const params = (new URL(document.location)).searchParams;
 
-// function makeNumberArray() {
-//   var array = [];
-//   for (int i = 1; i < 21; i++) {
-//     array.push(i);
-//   }
-//   return array;
-// }
-
-// const numbers = ref(makeNumberArray())
+const numberOfPlayers = ref(params.get('numberOfPlayers'))
 
 
 const someFunc = async () => {
