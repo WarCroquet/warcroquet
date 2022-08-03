@@ -5,6 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    
     "deploy": "git subtree push --prefix .output/public origin gh-pages"
   },
   "devDependencies": {
