@@ -12,14 +12,14 @@ Syntax to when using this component:
         <div :id="playerName + '-playercolor-ring'" class="relative w-28 h-28 rounded-full -z-10 shadow-warCircle" :style="{backgroundColor: '#' + playerColor}">
 
           <div :id="playerName + '-class-container'" class="absolute top-50% right-50% mt-4 ml-4 w-20 h-20 rounded-full shadow-warCircle bg-black-500">
-            <img :id="playerName + '-class-img'" :src="'/gfx/icon-' + playerClass + '.png'"  alt="class logo icon" class="rounded-full shadow-warCircle"/>
+            <img :id="playerName + '-class-img'" :src="'~/assets/icon-' + playerClass + '.png'"  alt="class logo icon" class="rounded-full shadow-warCircle"/>
 
             <span :id="playerName + '-stun-span'" class="absolute h-9 w-9 rounded-full bg-iconGrey bottom-16 right-12 shadow-warCircle">
-              <img :id="playerName + '-stun-img'" src="/gfx/stun-icon.png" alt="class logo icon" class="rounded-full w-6 h-6 mx-auto my-2"/>
+              <img :id="playerName + '-stun-img'" src="~/assets/stun-icon.png" alt="class logo icon" class="rounded-full w-6 h-6 mx-auto my-2"/>
             </span>
 
             <span :id="playerName + '-ability-span'" class="absolute h-9 w-9 rounded-full bg-iconGrey bottom-5 right-[4.5rem] shadow-warCircle">
-               <img :id="playerName + '-ability-img'" src="/gfx/ability-icon.png" alt="class logo icon" class="rounded-full p-2"/>
+               <img :id="playerName + '-ability-img'" src="~/assets/ability-icon.png" alt="class logo icon" class="rounded-full p-2"/>
             </span>
           </div> 
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="menu flex flex-col">
     <div class="logo">
-      <img src="/gfx/warcrocket_full.png" class="w-52 mt-10 mb-20">
+      <img src="~/assets/warcrocket_full.png" class="w-52 mt-10 mb-20">
     </div>
     
       <div class="link">
@@ -16,9 +16,6 @@
       <div class="link">
         <NuxtLink to="about" class="btn btn-yellow">ABOUT</NuxtLink>
       </div>
-
-   
-    
   </div>
 </template>
 

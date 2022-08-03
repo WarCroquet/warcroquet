@@ -2,7 +2,7 @@
   <div>
     <div class="logo">
       <div>
-        <img src="/gfx/logo.png" />
+        <img src="~/assets/logo.png" />
 
       </div>
     </div>

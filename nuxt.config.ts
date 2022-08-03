@@ -13,5 +13,5 @@ export default defineNuxtConfig({
   },
   build: {
     publicPath: "./_nuxt"
-  }
+  },
 })

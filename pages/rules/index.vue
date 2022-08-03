@@ -34,7 +34,7 @@
     crocket kølle. 1: En hel kølle. 2: ¾ kølle. 3: Stor ½ kølle. 4: Lille ½
     kølle. <br />
 
-    <img src="\gfx\croquet_lenghts.png" class="shadow-xl mb-5">
+    <img src="~\assets\croquet_lenghts.png" class="shadow-xl mb-5">
 
     <br />
     <h4 class="text-white font-bold text-lg">Classes:</h4><br />
