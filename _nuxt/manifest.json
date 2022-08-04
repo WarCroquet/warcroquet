@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-4945a9e1.mjs",
+    "file": "entry-cccf1642.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -13,7 +13,7 @@
       "pages/rules/index.vue"
     ],
     "css": [
-      "entry.b8305d27.css"
+      "entry.79cbaf95.css"
     ],
     "assets": [
       "warcrocket_full.e633c9bc.png",
@@ -22,27 +22,27 @@
     ]
   },
   "pages/about/index.vue": {
-    "file": "index-edf98298.mjs",
+    "file": "index-8e4b33ca.mjs",
     "src": "pages/about/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_LayoutMain-c51384ef.mjs",
+      "_LayoutMain-0ef30845.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_LayoutMain-c51384ef.mjs": {
-    "file": "LayoutMain-c51384ef.mjs",
+  "_LayoutMain-0ef30845.mjs": {
+    "file": "LayoutMain-0ef30845.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/createGame/index.vue": {
-    "file": "index-5322138d.mjs",
+    "file": "index-ceaba457.mjs",
     "src": "pages/createGame/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-c51384ef.mjs",
+      "_LayoutMain-0ef30845.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
@@ -50,17 +50,17 @@
     "file": "main-47dfe43e.mjs"
   },
   "pages/createPlayers/index.vue": {
-    "file": "index-0e261654.mjs",
+    "file": "index-f0a94619.mjs",
     "src": "pages/createPlayers/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-c51384ef.mjs",
+      "_LayoutMain-0ef30845.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-0e74136c.mjs",
+    "file": "index-470adeaf.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -68,17 +68,17 @@
     ]
   },
   "pages/joinGame/index.vue": {
-    "file": "index-364bf4ee.mjs",
+    "file": "index-b1407467.mjs",
     "src": "pages/joinGame/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_LayoutMain-c51384ef.mjs",
+      "_LayoutMain-0ef30845.mjs",
       "_main-47dfe43e.mjs"
     ]
   },
   "pages/mainScreen/index.vue": {
-    "file": "index-7e5ae0bc.mjs",
+    "file": "index-1e0d0606.mjs",
     "src": "pages/mainScreen/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -86,11 +86,11 @@
     ]
   },
   "pages/rules/index.vue": {
-    "file": "index-ce2a1040.mjs",
+    "file": "index-cfd69930.mjs",
     "src": "pages/rules/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_LayoutMain-c51384ef.mjs",
+      "_LayoutMain-0ef30845.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   }
