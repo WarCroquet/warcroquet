@@ -18,6 +18,11 @@
       <option>Warrior</option>
     </select><br /><br />
 
+    <!-- <select class="select" v-model.number="numberOfPlayers">
+      <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
+      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{ playerNum }} Player{{ playerNum > 1 ? 's' : '' }}</option>
+    </select><br /><br /> -->
+
     <p>Player name:</p>
     <input style="color:black"><br /><br />
 
@@ -45,8 +50,31 @@ import { ref } from 'vue'
 
 const params = (new URL(document.location)).searchParams;
 
+
+
+var playerArray = ref([])
+
 const numberOfPlayers = ref(params.get('numberOfPlayers'))
 
+const classesArray = ref([
+  "Druid",
+  "Death Knight",
+  "Hunter",
+  "Mage",
+  "Paladin",
+  "Priest",
+  "Rogue",
+  "Shaman",
+  "Warlock",
+  "Warrior"
+])
+
+const colorArray = ref([
+  "Red",
+  "Yellow",
+  "Green",
+  "Black",
+])
 
 const someFunc = async () => {
   console.log(await someLogic())

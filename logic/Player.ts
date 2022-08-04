@@ -14,12 +14,14 @@ class Player {
 	Class : Class;
 	Stun : number;
 	CD : number;
+	Color : string;
 
-	constructor(name : string, _class : Class) {
+	constructor(name : string, _class : Class, color : string) {
 		this.Name = name;
 		this.Class = _class;
 		this.Stun = 0;
 		this.CD = 0;
+		this.Color = color;
 	}
 
 	UpdateDecremantals () {

@@ -5,10 +5,7 @@
 
     <select class="select" v-model.number="numberOfPlayers">
       <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
-      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{ playerNum }} Player{{ playerNum > 1 ?
-          's' :
-          ''
-      }}</option>
+      <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{ playerNum }} Player{{ playerNum > 1 ? 's' : '' }}</option>
     </select>
 
     <template #footer>
