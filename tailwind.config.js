@@ -15,7 +15,7 @@ module.exports = {
           1200: '#BA9856',
         },
         'iconGrey': '#A5BFB8',
-        
+
       },
       boxShadow: {
         'warCircle': '2px 4px 4px 0 rgba(0, 0, 0, 0.25)',

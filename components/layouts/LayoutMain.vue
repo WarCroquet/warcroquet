@@ -1,10 +1,7 @@
 <template>
   <div>
     <div class="logo">
-      <div>
-        <img src="~/assets/logo.png" />
-
-      </div>
+      <img src="~/assets/logo.png" />
     </div>
     <div class="content">
       <div class="headerText">
@@ -27,10 +24,10 @@
 .content {
   @apply ml-10 mr-10 mb-10;
 
-  .footer {}
+  .footer {
+  }
 
   .main-content {
-
     @apply text-white;
   }
 

@@ -15,8 +15,8 @@
       <option>Rogue</option>
       <option>Shaman</option>
       <option>Warlock</option>
-      <option>Warrior</option>
-    </select><br /><br />
+      <option>Warrior</option></select
+    ><br /><br />
 
     <!-- <select class="select" v-model.Class="chosenClass">
       <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
@@ -24,7 +24,7 @@
     </select><br /><br /> -->
 
     <p>Player name:</p>
-    <input style="color:black"><br /><br />
+    <input style="color: black" /><br /><br />
 
     <p>Color:</p>
     <select class="select">
@@ -32,8 +32,8 @@
       <option>Red</option>
       <option>Yellow</option>
       <option>Green</option>
-      <option>Black</option>
-    </select><br /><br />
+      <option>Black</option></select
+    ><br /><br />
 
     <template #footer>
       <div class="link">
@@ -44,33 +44,34 @@
 </template>
 
 <script setup lang="ts">
-import LayoutMain from '~/componenets/layouts/LayoutMain'
-import { GetClasses } from '~/logic/main'
-import { Class } from '~/logic/Class'
-import { ref } from 'vue'
+import { GetClasses } from "~/logic/main";
+import { Class } from "~/logic/Class";
+import { ref } from "vue";
 
-const params = (new URL(document.location)).searchParams;
+const params = new URL(document.location).searchParams;
 
-const chosenClass = ref(Class)
-const chosenName = ref("")
-// const chosenColor = 
+const chosenClass = ref(Class);
+const chosenName = ref("");
+// const chosenColor =
 
-var playerArray = ref([])
+var playerArray = ref([]);
 
-const numberOfPlayers = ref(params.get('numberOfPlayers'))
+const numberOfPlayers = ref(params.get("numberOfPlayers"));
 
-const classesArray = ref(GetClasses())
-const colorArray = ref([
-  "Red",
-  "Yellow",
-  "Green",
-  "Black",
-])
+const classesArray = ref(GetClasses());
+const colorArray = ref(["Red", "Yellow", "Green", "Black"]);
+</script>
 
-const someFunc = async () => {
-  console.log(await someLogic())
-}
-</script>'
+<script lang="ts">
+import LayoutMain from "~~/components/layouts/LayoutMain.vue";
+
+export default {
+  name: "createPlayers",
+  components: {
+    LayoutMain,
+  },
+};
+</script>
 
 <style lang="scss">
 h3 {
