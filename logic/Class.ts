@@ -1,5 +1,5 @@
 
-import Ability from './Ability'
+import { Ability } from './Ability'
 
 export class Class {
 	Name: string;

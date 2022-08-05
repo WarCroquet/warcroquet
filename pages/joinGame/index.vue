@@ -22,6 +22,7 @@
 <script setup lang="ts">
 import LayoutMain from '~/componenets/layouts/LayoutMain'
 import {someLogic} from '~/logic/main'
+import '@formkit/themes/genesis'
 
 var message = "" 
 
@@ -36,5 +37,8 @@ const someFunc = async () => {
   }
   h2 {
     @apply text-white text-center font-bold text-2xl;
+  }
+  .formkit-input[type=text] {
+    background-color: white
   }
 </style>
