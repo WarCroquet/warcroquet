@@ -5,7 +5,7 @@
 
   <div class="flex flex-wrap text-white justify-center mt-4">
 
-    <div class="containerPaddingComponent">
+    <!-- <div class="containerPaddingComponent">
       <div :id="playerName + '-playercolor-ring'" class="relative w-28 h-28 rounded-full -z-10 shadow-warCircle"
         :style="{ backgroundColor: '#' + playerColor }">
 
@@ -31,7 +31,7 @@
       }}</p>
       <p :id="playerName + '-class-parapraph'" class="font-bold text-sm text-center mb-2 text-green-1100"
         style="text-transform: uppercase;">{{ playerClass }}</p>
-    </div>
+    </div> -->
 
     <playerTemplate playerColor="ED5252" playerClass="mage" playerName="MR. JETSET" />
     <playerTemplate playerColor="ED9C52" playerClass="hunter" playerName="TT" />
