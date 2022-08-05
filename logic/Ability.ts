@@ -1,5 +1,5 @@
 
-class Ability {
+export class Ability {
 	Name: string;
 	Description: string;
 	CD: number;
@@ -11,5 +11,3 @@ class Ability {
 	}
 
 }
-
-export default Ability 

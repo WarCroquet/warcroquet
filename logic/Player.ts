@@ -7,9 +7,9 @@
 //     CD : number
 // }
 
-import Class from './Class'
+import { Class } from './Class'
 
-class Player {
+export class Player {
 	Name : string;
 	Class : Class;
 	Stun : number;
@@ -34,4 +34,3 @@ class Player {
 	
 }
 
-export default Class 

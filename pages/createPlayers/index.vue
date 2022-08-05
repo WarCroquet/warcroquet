@@ -18,7 +18,7 @@
       <option>Warrior</option>
     </select><br /><br />
 
-    <!-- <select class="select" v-model.number="numberOfPlayers">
+    <!-- <select class="select" v-model.Class="chosenClass">
       <option disabled v-if="numberOfPlayers === 0" value="0">Select players</option>
       <option v-for="playerNum in allowedNumberOfPlayers" :value="playerNum">{{ playerNum }} Player{{ playerNum > 1 ? 's' : '' }}</option>
     </select><br /><br /> -->
@@ -45,30 +45,21 @@
 
 <script setup lang="ts">
 import LayoutMain from '~/componenets/layouts/LayoutMain'
-import { someLogic } from '~/logic/main'
+import { GetClasses } from '~/logic/main'
+import { Class } from '~/logic/Class'
 import { ref } from 'vue'
 
 const params = (new URL(document.location)).searchParams;
 
-
+const chosenClass = ref(Class)
+const chosenName = ref("")
+// const chosenColor = 
 
 var playerArray = ref([])
 
 const numberOfPlayers = ref(params.get('numberOfPlayers'))
 
-const classesArray = ref([
-  "Druid",
-  "Death Knight",
-  "Hunter",
-  "Mage",
-  "Paladin",
-  "Priest",
-  "Rogue",
-  "Shaman",
-  "Warlock",
-  "Warrior"
-])
-
+const classesArray = ref(GetClasses())
 const colorArray = ref([
   "Red",
   "Yellow",

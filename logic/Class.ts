@@ -1,7 +1,7 @@
 
 import Ability from './Ability'
 
-class Class {
+export class Class {
 	Name: string;
 	Ability: Ability;
 	Passive: Ability;
@@ -16,4 +16,3 @@ class Class {
 
 }
 
-export default Class 
