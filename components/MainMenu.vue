@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="link">
-      <NuxtLink to="selectPlayers" class="btn btn-yellow">create game</NuxtLink>
+      <NuxtLink to="setup" class="btn btn-yellow">create game</NuxtLink>
     </div>
     <div class="link">
       <NuxtLink to="join" class="btn btn-yellow">join game</NuxtLink>
