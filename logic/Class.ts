@@ -1,5 +1,5 @@
 
-import Ability from './Ability'
+import { Ability } from './Ability'
 
 export class Class {
 	Name: string;
@@ -7,11 +7,11 @@ export class Class {
 	Passive: Ability;
 	IconUrl: string;
 
-	constructor(name : string, ability : Ability, passive : Ability, iconUrl : string) {
+	constructor(name: string, ability: Ability, passive: Ability) {
 		this.Name = name;
 		this.Ability = ability;
 		this.Passive = passive;
-		this.IconUrl = iconUrl;
+		this.IconUrl = './assets/icon-' + name.toLowerCase() + '.png';
 	}
 
 }

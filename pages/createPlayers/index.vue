@@ -44,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { GetClasses } from "~/logic/main";
+import { GetClasses } from "~~/logic/GameLogic";
 import { Class } from "~/logic/Class";
 import { ref } from "vue";
 
