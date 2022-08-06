@@ -3,7 +3,12 @@
     <h3>GAME SETUP</h3>
 
     <label>Number of players</label>
-    <select class="select" v-model.number="playerCount">
+    <select
+      id="testSelect"
+      class="select"
+      v-model.number="playerCount"
+      @change="updatePlayerCount($event)"
+    >
       <option disabled selected value="0">Select players</option>
       <option
         :key="playerNum"
@@ -16,7 +21,16 @@
 
     <br /><br />
     <label>Allow duplicate classes</label>
-    <input type="checkbox" id="allowDuplicateClasses" />
+    <input
+      type="checkbox"
+      id="allowDuplicateClasses"
+      v-model="checked"
+      @change="allowDuplicateClasses($event)"
+    />
+  </div>
+
+  <div class="link">
+    <button class="btn btn-yellow" @click="onNext(settings)">next</button>
   </div>
 </template>
 
@@ -26,14 +40,36 @@ import { GameSettings } from "~/logic/GameSettings";
 
 const playerCount = ref(0);
 const allowedPlayerCount = ref([1, 2, 3, 4, 5, 6, 7, 8]);
+var settings = new GameSettings();
+
+// function updatePlayerCount(event) {
+//   alert(event.target.value);
+//   settings.PlayerCount = event.target.value;
+//   alert(settings.playerCount);
+// }
+
+// function allowDuplicateClasses(event) {
+//   alert(event.target.value);
+//   settings.AllowDuplicateClasses = event.target.value;
+//   alert(settings.playerCount);
+// }
 </script>
 
 <script lang="ts">
 export default {
   name: "GameSetup",
-  //   props: {
-  //     GameSettings: GameSettings,
-  //   },
+  methods: {
+    onNext(settings: GameSettings) {
+      this.$emit("settings-next", settings);
+    },
+    updatePlayerCount: function (e) {
+      alert("123test");
+    },
+    allowDuplicateClasses: function (e) {
+      alert("test123");
+    },
+  },
+  emits: ["settings-next"],
 };
 </script>
 
