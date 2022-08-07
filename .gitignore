@@ -5,6 +5,7 @@ node_modules
 .nitro
 .cache
 .output/server
+.output/public
 .output/nitro.json
 .env
 .DS_Store
