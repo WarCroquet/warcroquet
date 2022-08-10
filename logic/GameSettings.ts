@@ -1,6 +1,8 @@
 export class GameSettings {
-    PlayerCount: number;
-    AllowDuplicateClasses: boolean;
+    PlayerCount: number = 0;
+    AllowDuplicateClasses: boolean = false;
+
+    constructor() {}
 
     // Sigurd: Ved ikke om det er nødvendigt med getter og setter?
     // get playerCount() {

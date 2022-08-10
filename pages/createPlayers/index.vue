@@ -1,7 +1,7 @@
 <template>
   <LayoutMain>
     <h3>NEW GAME</h3>
-    <h2 @click="someFunc">Player 1 of {{ numberOfPlayers }}</h2>
+    <h2>Player 1 of {{ numberOfPlayers }}</h2>
 
     <p>Class:</p>
     <select class="select">

@@ -3,6 +3,7 @@
     <h3>GAME SETUP</h3>
 
     <label>Number of players</label>
+    <a href="#" v-on:click="updatePlayerCount($event)">Try me</a>
     <select
       id="testSelect"
       class="select"
@@ -38,9 +39,11 @@
 import { ref } from "vue";
 import { GameSettings } from "~/logic/GameSettings";
 
+const checked = ref(false)
 const playerCount = ref(0);
 const allowedPlayerCount = ref([1, 2, 3, 4, 5, 6, 7, 8]);
-var settings = new GameSettings();
+const settings = ref(new GameSettings());
+
 
 // function updatePlayerCount(event) {
 //   alert(event.target.value);
@@ -53,6 +56,7 @@ var settings = new GameSettings();
 //   settings.AllowDuplicateClasses = event.target.value;
 //   alert(settings.playerCount);
 // }
+
 </script>
 
 <script lang="ts">
@@ -64,6 +68,7 @@ export default {
     },
     updatePlayerCount: function (e) {
       alert("123test");
+      settings.PlayerCount = Number(playerCount)
     },
     allowDuplicateClasses: function (e) {
       alert("test123");

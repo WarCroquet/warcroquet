@@ -29,7 +29,7 @@
 import LayoutMain from "~~/components/layouts/LayoutMain.vue";
 
 export default {
-  name: "joinGame",
+  name: "join",
   components: {
     LayoutMain,
   },

@@ -12,7 +12,7 @@ import { GameSettings } from "~/logic/GameSettings";
 function next(settings: GameSettings) {} // Navigate to /createPlayers
 
 export default {
-  name: "about",
+  name: "setup",
   components: {
     LayoutMain,
     GameSetup,
@@ -21,6 +21,7 @@ export default {
     next(settings: GameSettings) {
       // Navigate to /createPlayers
       console.log("ready to navigate to createrPlayers");
+      console.log("PlayerCount:" + settings.PlayerCount);
     },
   },
 };

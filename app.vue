@@ -4,8 +4,8 @@
   </NuxtLayout>
 </template>
 
-<script lang="ts">
-</script>
+<!-- <script lang="ts">
+</script> -->
 
 <style lang="scss">
 //Font to be used globally

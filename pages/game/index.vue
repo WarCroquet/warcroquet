@@ -4,7 +4,7 @@
   </h1>
 
   <div class="flex flex-wrap text-white justify-center mt-4">
-    <PlayerTemplate
+    <!-- <PlayerTemplate
       playerColor="ED5252"
       playerClass="mage"
       playerName="MR. JETSET"
@@ -19,7 +19,7 @@
       playerColor="52ED6B"
       playerClass="shaman"
       playerName="PLAYER 4z"
-    />
+    /> -->
   </div>
 
   <div class="flex flex-wrap justify-center">
@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import PlayerTemplate from "~~/componenets/PlayerTemplate.vue";
+// import PlayerTemplate from "~~/componenets/PlayerTemplate.vue";
 
 export default {
-  name: "joinGame",
+  name: "game",
   components: {
-    PlayerTemplate,
+    // PlayerTemplate,
   },
 };
 </script>
