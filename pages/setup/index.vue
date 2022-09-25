@@ -17,11 +17,7 @@ export default {
   },
   methods: {
     next(settings: GameSettings) {
-      if (settings.PlayerCount < 1) {
-        alert("Select number of players");
-        return;
-      }
-
+      localStorage.setItem("gameSettings", JSON.stringify(settings));
       this.$router.push("createPlayers");
     },
   },

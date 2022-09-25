@@ -49,6 +49,11 @@ export default {
   name: "GameSetup",
   methods: {
     onNext(settings: GameSettings) {
+      if (settings.PlayerCount < 1) {
+        alert("Select number of players");
+        return;
+      }
+
       this.$emit("settings-next", settings);
     },
     updatePlayerCount(settings: GameSettings, playerCount: number) {

@@ -1,8 +1,6 @@
 <template>
   <LayoutMain>
-    <CreatePlayer @create-player="createPlayer" />
-
-    <!--Lav knap til at starte game her med playersArray som param-->
+    <CreatePlayer @create-player="createPlayer" @start-game="startGame" />
   </LayoutMain>
 </template>
 
@@ -25,6 +23,11 @@ export default {
   methods: {
     createPlayer(player: Player) {
       this.playersArray.push(player);
+    },
+    startGame(player: Player) {
+      this.createPlayer(player);
+      localStorage.setItem("players", JSON.stringify(this.playersArray));
+      this.$router.push("game");
     },
   },
 };

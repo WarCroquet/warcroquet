@@ -1,6 +1,6 @@
 <template>
   <h3>NEW GAME</h3>
-  <!--<h3>Player {{ numberOfPlayers }} Data</h3>-->
+  <h3>Player {{ this.playersCreated }} Data</h3>
 
   <p>Player name:</p>
   <input id="playerName" style="color: black" /><br /><br />
@@ -29,11 +29,22 @@
     </option></select
   ><br /><br />
 
-  <!--<h2>Player 1 of {{ numberOfPlayers }}</h2>-->
+  <h2>
+    Player {{ this.playersCreated }} of {{ this.gameSettings.PlayerCount }}
+  </h2>
   <div class="link">
     <button
       class="btn btn-yellow"
       @click="createPlayer(chosenName(), _class, _color)"
+      v-if="this.gameSettings.PlayerCount == 1"
+    >
+      Start Game
+    </button>
+    <button
+      id="createPlayerBtn"
+      class="btn btn-yellow"
+      @click="createPlayer(chosenName(), _class, _color)"
+      v-else
     >
       Create Player
     </button>
@@ -44,9 +55,7 @@
 import { GetClasses, GetColors } from "~~/logic/GameLogic";
 import { Class } from "~/logic/Class";
 import { Player } from "~/logic/Player";
-
-//const params = new URL(document.location).searchParams;
-//const numberOfPlayers = ref(params.get("numberOfPlayers"));
+import { GameSettings } from "~/logic/GameSettings";
 
 var classesArray: Class[];
 await GetClasses().then(function (result) {
@@ -82,6 +91,17 @@ export default {
   components: {
     LayoutMain,
   },
+  data() {
+    return {
+      gameSettings: GameSettings,
+      playersCreated: 1,
+    };
+  },
+  mounted() {
+    this.gameSettings = JSON.parse(
+      localStorage.getItem("gameSettings")
+    ) as GameSettings;
+  },
   methods: {
     createPlayer(chosenName: string, chosenClass: Class, chosenColor: string) {
       if (!chosenName || !chosenClass || !chosenColor) {
@@ -90,8 +110,25 @@ export default {
       }
 
       var player = new Player(chosenName, chosenClass, chosenColor);
-      this.$emit("create-player", player);
 
+      if (!this.gameSettings.AllowDuplicateClasses) {
+        this.classesArray = this.classesArray.filter((_class: Class) => {
+          return _class !== chosenClass;
+        });
+        this.colorArray = this.colorArray.filter((_color: string) => {
+          return _color !== chosenColor;
+        });
+      }
+
+      if (this.playersCreated == this.gameSettings.PlayerCount) {
+        this.$emit("start-game", player);
+        return;
+      } else if (this.playersCreated == this.gameSettings.PlayerCount - 1) {
+        document.getElementById("createPlayerBtn").textContent = "Start Game";
+      }
+
+      this.playersCreated++;
+      this.$emit("create-player", player);
       this.initialState();
     },
     initialState() {
