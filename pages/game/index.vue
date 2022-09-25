@@ -3,23 +3,12 @@
     BATTLE ARENA
   </h1>
 
-  <div class="flex flex-wrap text-white justify-center mt-4">
-    <!-- <PlayerTemplate
-      playerColor="ED5252"
+  <div id="playersDiv" class="flex flex-wrap text-white justify-center mt-4">
+    <PlayerTemplate
+      playerColor="#ED5252"
       playerClass="mage"
       playerName="MR. JETSET"
     />
-    <PlayerTemplate playerColor="ED9C52" playerClass="hunter" playerName="TT" />
-    <PlayerTemplate
-      playerColor="52ED6B"
-      playerClass="shaman"
-      playerName="PLAYER 4"
-    />
-    <PlayerTemplate
-      playerColor="52ED6B"
-      playerClass="shaman"
-      playerName="PLAYER 4z"
-    /> -->
   </div>
 
   <div class="flex flex-wrap justify-center">
@@ -29,13 +18,36 @@
   </div>
 </template>
 
-<script>
-// import PlayerTemplate from "~~/componenets/PlayerTemplate.vue";
+<script lang="ts">
+import PlayerTemplate from "~~/componenets/PlayerTemplate.vue";
+import { Player } from "~/logic/Player";
 
 export default {
   name: "game",
   components: {
-    // PlayerTemplate,
+    //PlayerTemplate,
+  },
+  data() {
+    return {
+      players: [],
+    };
+  },
+  mounted() {
+    this.players = JSON.parse(localStorage.getItem("players")) as Player[];
+
+    this.players.forEach((player: Player) => {
+      var playerTemplateHtml =
+        '<PlayerTemplate playerColor="' +
+        //player.ColorHex() +
+        "#ED5252" +
+        '" playerClass="' +
+        player.Class.Name +
+        '" playerName="' +
+        player.Name +
+        '"/>';
+
+      document.getElementById("playersDiv").innerHTML += playerTemplateHtml;
+    });
   },
 };
 </script>

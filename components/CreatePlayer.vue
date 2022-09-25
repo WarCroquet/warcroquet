@@ -55,6 +55,7 @@
 import { GetClasses, GetColors } from "~~/logic/GameLogic";
 import { Class } from "~/logic/Class";
 import { Player } from "~/logic/Player";
+import { Color } from "~/logic/Color";
 import { GameSettings } from "~/logic/GameSettings";
 
 var classesArray: Class[];
@@ -62,10 +63,7 @@ await GetClasses().then(function (result) {
   classesArray = result;
 });
 
-var colorArray: String[];
-await GetColors().then(function (result) {
-  colorArray = result;
-});
+var colorArray: Color[] = Object.keys(Color) as Color[];
 
 function chooseClass(chosenClassName: string) {
   this._class = classesArray.filter((item) => item.Name == chosenClassName)[0];
@@ -80,7 +78,7 @@ function chosenName(): string {
 }
 
 var _class: Class;
-var _color: string;
+var _color: Color;
 </script>
 
 <script lang="ts">
@@ -103,7 +101,7 @@ export default {
     ) as GameSettings;
   },
   methods: {
-    createPlayer(chosenName: string, chosenClass: Class, chosenColor: string) {
+    createPlayer(chosenName: string, chosenClass: Class, chosenColor: Color) {
       if (!chosenName || !chosenClass || !chosenColor) {
         alert("Fill in remaining player information");
         return;
@@ -115,7 +113,7 @@ export default {
         this.classesArray = this.classesArray.filter((_class: Class) => {
           return _class !== chosenClass;
         });
-        this.colorArray = this.colorArray.filter((_color: string) => {
+        this.colorArray = this.colorArray.filter((_color: Color) => {
           return _color !== chosenColor;
         });
       }

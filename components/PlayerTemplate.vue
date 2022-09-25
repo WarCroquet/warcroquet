@@ -3,7 +3,7 @@
     <div
       :id="playerName + '-playercolor-ring'"
       class="relative w-28 h-28 rounded-full -z-10 shadow-warCircle"
-      :style="{ backgroundColor: '#' + playerColor }"
+      :style="{ backgroundColor: playerColor }"
     >
       <div
         :id="playerName + '-class-container'"
