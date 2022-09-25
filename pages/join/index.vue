@@ -14,15 +14,14 @@
         v-model="message"
       />
     </div>
-    <template #footer>
-    </template>
+    <template #footer> </template>
   </LayoutMain>
 </template>
 
 <script setup lang="ts">
-  import '@formkit/themes/genesis'
-  
-  var message = ""
+import "@formkit/themes/genesis";
+
+var message = "";
 </script>
 
 <script lang="ts">
@@ -44,7 +43,7 @@ h3 {
 h2 {
   @apply text-white text-center font-bold text-2xl;
 }
-.formkit-input[type=text] {
-  background-color: white
+.formkit-input[type="text"] {
+  background-color: white;
 }
 </style>

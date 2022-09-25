@@ -1,6 +1,17 @@
 import { Ability } from "./Ability"
 import { Class } from "./Class"
 
+function GetColors(): Promise<string[]> {
+	var colors = [
+		"Red",
+		"Yellow",
+		"Green",
+		"Black"
+	]
+
+	return new Promise((resolve, reject) => resolve(colors))
+}
+
 function GetClasses(): Promise<Class[]> {
 	var classes = [
 		GetWarrior(),
@@ -97,6 +108,7 @@ function GetDruid(): Class {
 }
 
 export {
-	GetClasses
+	GetClasses,
+	GetColors
 }
 
