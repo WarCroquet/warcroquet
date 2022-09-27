@@ -7,6 +7,7 @@ export class Player {
 	Stun: number;
 	CD: number;
 	Color: Color;
+	ColorHex: string;
 
 	constructor(name: string, _class: Class, color: Color) {
 		this.Name = name;
@@ -14,6 +15,7 @@ export class Player {
 		this.Stun = 0;
 		this.CD = 0;
 		this.Color = color;
+		this.ColorHex = this.GetColorHex();
 	}
 
 	UpdateDecremantals() {
@@ -24,7 +26,7 @@ export class Player {
 	SetCD = () => this.CD = this.Class.Ability.CD;
 	SetStun = (roundsStunned: number) => this.Stun = roundsStunned;
 
-	ColorHex(): string {
+	private GetColorHex(): string {
 		switch (this.Color) {
 			case Color.Red:
 				return "#ED5252"
