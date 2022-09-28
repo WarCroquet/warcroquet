@@ -40,7 +40,7 @@
     </button>
 
     <button @click="nextRound_click()" class="btn btn-yellow-ability">
-      NEXT
+      NEXT ROUND
     </button>
   </div>
 </template>
@@ -83,7 +83,7 @@ export default {
       if (this.stunToggle) {
         SetRoundsStunned(player, 1);
       }
-      if (this.cooldownToggle && player.Cooldown == 0) {
+      if (this.cooldownToggle) {
         SetCooldown(player);
       }
     },
@@ -117,7 +117,7 @@ export default {
       this.setCooldownToggle(false);
 
       this.players.forEach((player: Player) => {
-        UpdateDecremantals(player);
+        UpdateDecremantals(player); // Ikke opdater decrementals for en player hvis playeren er stunned/cooldown i denne runde
         // Opdater stun + cooldown tal på hver template.
         console.log(player.Name);
         console.log("Rounds stunned: " + player.RoundsStunned);
