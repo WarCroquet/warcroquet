@@ -4,27 +4,28 @@ import { Color } from './Color'
 export class Player {
 	Name: string;
 	Class: Class;
-	Stun: number;
-	CD: number;
+	RoundsStunned: number;
+	Cooldown: number;
 	Color: Color;
 	ColorHex: string;
 
 	constructor(name: string, _class: Class, color: Color) {
 		this.Name = name;
 		this.Class = _class;
-		this.Stun = 0;
-		this.CD = 0;
+		this.RoundsStunned = 0;
+		this.Cooldown = 0;
 		this.Color = color;
 		this.ColorHex = this.GetColorHex();
 	}
 
-	UpdateDecremantals() {
-		if (this.Stun > 0) this.Stun--;
-		if (this.CD > 0) this.CD--;
-	}
+	// Kan det virkelig passe man ikke kan definere metoder på en klasse som kan blive kaldt fra en vue component?
+	// public UpdateDecremantals() {
+	// 	if (this.RoundsStunned > 0) this.RoundsStunned--;
+	// 	if (this.Cooldown > 0) this.Cooldown--;
+	// }
 
-	SetCD = () => this.CD = this.Class.Ability.CD;
-	SetStun = (roundsStunned: number) => this.Stun = roundsStunned;
+	// public SetCooldown = () => this.Cooldown = this.Class.Ability.Cooldown;
+	// public SetRoundsStunned = (roundsStunned: number) => this.RoundsStunned = roundsStunned;
 
 	private GetColorHex(): string {
 		switch (this.Color) {
@@ -39,3 +40,16 @@ export class Player {
 		}
 	}
 }
+
+export function UpdateDecremantals(player: Player) {
+	if (player.RoundsStunned > 0) player.RoundsStunned--;
+	if (player.Cooldown > 0) player.Cooldown--;
+}
+
+export function SetCooldown(player: Player) {
+	player.Cooldown = player.Class.Ability.Cooldown;
+}
+
+export function SetRoundsStunned(player: Player, roundsStunned: number) {
+	player.RoundsStunned += roundsStunned;
+} 

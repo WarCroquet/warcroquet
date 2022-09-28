@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import { GetClasses, GetColors } from "~~/logic/GameLogic";
+import { GetClasses } from "~~/logic/GameLogic";
 import { Class } from "~/logic/Class";
 import { Player } from "~/logic/Player";
 import { Color } from "~/logic/Color";
@@ -62,8 +62,6 @@ var classesArray: Class[];
 await GetClasses().then(function (result) {
   classesArray = result;
 });
-
-var colorArray: Color[] = Object.keys(Color) as Color[];
 
 function chooseClass(chosenClassName: string) {
   this._class = classesArray.filter((item) => item.Name == chosenClassName)[0];
@@ -77,6 +75,7 @@ function chosenName(): string {
   return document.getElementById("playerName").value;
 }
 
+var colorArray: Color[] = Object.keys(Color) as Color[];
 var _class: Class;
 var _color: Color;
 </script>

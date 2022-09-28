@@ -98,6 +98,5 @@ function GetDruid(): Class {
 
 export {
 	GetClasses,
-	GetColors
 }
 
