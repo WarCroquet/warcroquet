@@ -11,6 +11,8 @@
       :playerColor="player.ColorHex"
       :playerClass="player.Class.Name"
       :playerName="player.Name"
+      :stunIcon="player.StunIcon"
+      :abilityIcon="player.CooldownIcon"
       @click="player_click(player)"
     />
   </div>
@@ -22,7 +24,7 @@
       class="btn btn-yellow-ability opacity-70"
     >
       <img
-        src="~/assets/stun-icon.png"
+        src="~/assets/stun-icons/stun.png"
       /><!--Sæt den til venstre for teksten og gør den mindre-->
       STUN
     </button>
@@ -33,7 +35,7 @@
       class="btn btn-yellow-ability opacity-70"
     >
       <img
-        src="~/assets/ability-icon.png"
+        src="~/assets/cooldown-icons/ability.png"
       /><!--Sæt den til venstre for teksten og gør den mindre-->
       COOLDOWN
       <!--Den gider ikke aligne teksten??-->
@@ -89,6 +91,9 @@ export default {
     },
     stun_toggle() {
       this.setStunToggle(!this.stunToggle);
+      if (this.stunToggle) {
+        this.setCooldownToggle(false);
+      }
     },
     setStunToggle(toggle: Boolean) {
       this.stunToggle = toggle;
@@ -101,6 +106,9 @@ export default {
     },
     cooldown_toggle() {
       this.setCooldownToggle(!this.cooldownToggle);
+      if (this.cooldownToggle) {
+        this.setStunToggle(false);
+      }
     },
     setCooldownToggle(toggle: Boolean) {
       this.cooldownToggle = toggle;
@@ -117,11 +125,7 @@ export default {
       this.setCooldownToggle(false);
 
       this.players.forEach((player: Player) => {
-        UpdateDecremantals(player); // Ikke opdater decrementals for en player hvis playeren er stunned/cooldown i denne runde
-        // Opdater stun + cooldown tal på hver template.
-        console.log(player.Name);
-        console.log("Rounds stunned: " + player.RoundsStunned);
-        console.log("Cooldown: " + player.Cooldown);
+        UpdateDecremantals(player);
       });
     },
   },

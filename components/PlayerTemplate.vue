@@ -42,7 +42,7 @@
         >
           <img
             :id="playerName + '-stun-img'"
-            src="~/assets/stun-icon.png"
+            :src="'./assets/' + stunIcon"
             alt="class logo icon"
             class="rounded-full w-6 h-6 mx-auto my-2"
           />
@@ -63,7 +63,7 @@
         >
           <img
             :id="playerName + '-ability-img'"
-            src="~/assets/ability-icon.png"
+            :src="'./assets/' + abilityIcon"
             alt="class logo icon"
             class="rounded-full p-2"
           />
@@ -93,6 +93,8 @@ export default {
     "playerName", //Player name
     "playerColor", //Must be hex colorcode value with no hashtag in front
     "playerClass", //Player class. Must be lowercase.
+    "stunIcon", // Icon name including filetype
+    "abilityIcon", // Ability name including filetype
   ],
 };
 </script>
