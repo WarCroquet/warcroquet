@@ -20,6 +20,11 @@
     </ul>
     <br />
 
+    <img
+      src="~\assets\the-bois.png"
+      style="display: block; margin-left: auto; margin-right: auto; width: 50%"
+    />
+
     <p class="text-center">Copyright © 2022</p>
     <br />
 
