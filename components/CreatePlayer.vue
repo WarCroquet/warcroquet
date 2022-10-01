@@ -12,7 +12,7 @@
     @change="chooseClass($event.target.value)"
   >
     <option disabled selected>Select class</option>
-    <option :key="_class" v-for="_class in classesArray" :value="_class.Name">
+    <option :key="_class" v-for="_class in classesArray">
       {{ _class.Name }}
     </option></select
   ><br /><br />

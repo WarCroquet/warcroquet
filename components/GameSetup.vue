@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>GAME SETUP</h3>
+    <h3>NEW GAME</h3>
 
     <label>Number of players</label>
     <select
