@@ -19,17 +19,6 @@
 
   <div class="flex flex-wrap justify-center">
     <button
-      id="stunBtn"
-      @click="stun_toggle()"
-      class="btn btn-yellow-ability opacity-70"
-    >
-      <img
-        src="~/assets/stun-icons/stun.png"
-      /><!--Sæt den til venstre for teksten og gør den mindre-->
-      STUN
-    </button>
-
-    <button
       id="cooldownBtn"
       @click="cooldown_toggle()"
       class="btn btn-yellow-ability opacity-70"
@@ -39,6 +28,17 @@
       /><!--Sæt den til venstre for teksten og gør den mindre-->
       COOLDOWN
       <!--Den gider ikke aligne teksten??-->
+    </button>
+
+    <button
+      id="stunBtn"
+      @click="stun_toggle()"
+      class="btn btn-yellow-ability opacity-70"
+    >
+      <img
+        src="~/assets/stun-icons/stun.png"
+      /><!--Sæt den til venstre for teksten og gør den mindre-->
+      STUN
     </button>
 
     <button @click="nextRound_click()" class="btn btn-yellow-ability">
@@ -74,11 +74,14 @@ export default {
     this.players = JSON.parse(localStorage.getItem("players")) as Player[];
     this.stunToggle = false;
     this.cooldownToggle = false;
-    this.roundCounter = 0;
+    this.roundCounter = 1;
   },
   methods: {
     player_click(player: Player) {
-      if (!this.stunToggle && !this.cooldownToggle) {
+      if (
+        this.roundCounter <= 1 ||
+        (!this.stunToggle && !this.cooldownToggle)
+      ) {
         return;
       }
 
