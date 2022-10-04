@@ -21,8 +21,8 @@ function GetClasses(): Promise<Class[]> {
 function GetWarrior(): Class {
 	return new Class(
 		"Warrior",
-		new Ability(3, false, "Dual wield", "The player can hit two times with only one hand on the club."),
-		new Ability(0, true, "Enrage", "If Dual wield is on cooldown and the player gets through a gate, the cooldown on Dual Wield is reset.")
+		new Ability(3, false, "Dual Wield", "The player can hit two times with only one hand on the club."),
+		new Ability(0, true, "Enrage", "If Dual Wield is on cooldown and the player gets through a gate, the cooldown on Dual Wield is reset.")
 	)
 }
 function GetWarlock(): Class {
