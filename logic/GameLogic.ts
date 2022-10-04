@@ -74,24 +74,22 @@ function GetMage(): Class {
 function GetHunter(): Class {
 	return new Class(
 		"Hunter",
-		new Ability(2, false, "Aimed shot", "Kan skyde en ekstra gang med den modsatte ende af staven (billiard skud)."),
+		new Ability(2, false, "Aimed shot", "The player is able to shoot an extra time with the opposite end of the club, also known as a billiard shot."),
 		null
 	)
 }
 function GetDeathKnight(): Class {
 	return new Class(
 		"Death Knight",
-		new Ability(2, false, "Death grip", "(3 hele køllers range) Træk en modstanders kugle hen til dig. Kuglen skal placeres" +
-			" på den side som kuglen oprindeligt var i forhold til din kugle."),
-		new Ability(0, true, "Anti-magic zone", "(lille 1/2 kølles range) Ingen kan bruge abilities hvis de er inde i zonen.")
+		new Ability(2, false, "Death grip", "Three whole clubs range. Pull an opponent to the player. The opponent is placed beside the player, on the same side as the opponent's original position."),
+		new Ability(0, true, "Anti-magic zone", "All opponents within a small 1/2 club range of the player, are unable to use any abilities.")
 	)
 }
 function GetDruid(): Class {
 	return new Class(
 		"Druid",
-		new Ability(2, false, "Bear form or Moonkin form", "Bear form: (Global range) Charge til en selvvalgt spiller. Man kan ikke gå igennem gates med den." +
-			" | Moonkin form: (En hel kølles range) Alle inden for en kølles range af en selv bliver skubbet en kølle væk fra deres position i den vinkel" +
-			" de har i forhold til en selv. De deler CD."),
+		new Ability(2, false, "Bear form or Moonkin form", "Bear Form - Charge. Global range. Charge to any opponent of your choice. The player cannot pass through a gate doing so. Shares cooldown with Moonkin Form." +
+			" | Moonkin Form - Typhoon. One whole club range. All balls within a whole club's range of the player are moved one whole club away from their current position such that the angle to the player stays the same. Shares cooldown with Bear Form."),
 		null
 	)
 }

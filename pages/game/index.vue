@@ -2,11 +2,11 @@
   <h1 class="text-white font-bold text-center mt-5 mb-5 text-xl">
     BATTLE ARENA
   </h1>
-  <p class="text-white text-center">ROUND: {{ this.roundCounter }}</p>
+  <p class="text-white text-center">ROUND: {{ roundCounter }}</p>
 
   <div class="flex flex-wrap text-white justify-center mt-4">
     <PlayerTemplate
-      v-for="player in this.players"
+      v-for="player in players"
       :key="player"
       :playerColor="player.ColorHex"
       :playerClass="player.Class.Name"
