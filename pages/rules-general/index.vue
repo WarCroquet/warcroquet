@@ -36,7 +36,7 @@
     Længder er defineret ud fra en standard crocket kølle. 1: En hel kølle. 2: ¾
     kølle. 3: Stor ½ kølle. 4: Lille ½ kølle. <br />
 
-    <img src="~\assets\croquet_lenghts.png" class="shadow-xl mb-5" />
+    <img src="~\assets\croquet_lenghts.svg" />
 
     <button class="btn-yellow" @click="$router.go(-1)">Return</button
     ><br /><br />
