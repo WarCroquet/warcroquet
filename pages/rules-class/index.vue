@@ -9,7 +9,7 @@
     <strong>{{ _class.Name }}:</strong><br />
 
     <div v-if="_class.Ability != null">
-      Ability ({{ _class.Ability.Cooldown }} runder CD):
+      Ability ({{ _class.Ability.Cooldown }} rounds cooldown):
       <ul>
         <li>
           <u>{{ _class.Ability.Name }}</u
