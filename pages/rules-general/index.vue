@@ -9,32 +9,28 @@
     <strong>General Rules:</strong>
     <br />
 
-    General Normale crocket regler gælder, dog ikke at skyde en anden kugle væk
-    hvis de lægger op af hinanden. <br />
+    Standard rules of croquet apply to WarCroquet with one exception:<br />
+    If two balls are touching, one may not shoot the other ball away but instead
+    temporally move the second ball away till the shot has been taken.
+    <br /><br />
 
-    Hvis en kugle ikke kan skydes pga. en anden kugle, løftes den 2. kugle
-    indtil der er skudt. <br />
+    Each player chooses one of the ten classes and gain access to the chosen
+    class's abilities. It is up to the player to choose when to use an ability,
+    given the ability is off cooldown.<br />
+    It is not possible to use an ability in the first round.<br />
+    The first shot for each player should be taken within 50 cm of the starting
+    point.<br /><br />
 
-    Hver person vælger en af af nedenstående classes og kan anvende den
-    dertilhørende evne. Det er valgfrit om man vil bruge sin evne i den givne
-    runde. <br />
+    Before game preparation:<br />
+    - If a shaman is in the game, an object should be chosen as the totem before
+    the game starts.<br />
+    - A punishment for cheating should be agreed upon before game start.<br /><br />
 
-    Der kan ikke bruges abilities i første runde. <br />
-
-    STUN: Ens tur springes over, men hvis man har cooldown (CD) på en ability
-    går den stadig ned. <br />
-
-    Spilles der med Shaman, skal man bruge et objekt som kan bruges som totem.
-    <br />
-
-    Første skud skal skydes max 50 cm fra start-pinden. <br />
-
-    Straf for snyd aftales ad hoc før spillets start. <br />
-
-    En gate referere til de hvide mål man skal igennem. <br />
-
-    Længder er defineret ud fra en standard crocket kølle. 1: En hel kølle. 2: ¾
-    kølle. 3: Stor ½ kølle. 4: Lille ½ kølle. <br />
+    Terminology:<br />
+    - Stun: If a player is stunned their next turn is skipped. If the stunned
+    player's abilities are on cooldown, these will still decrease.<br />
+    - Gate: The white arches you need to shoot through to win the game.<br />
+    - Lengths: See figure below:
 
     <img src="~\assets\croquet_lenghts.svg" />
 
