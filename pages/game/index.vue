@@ -24,13 +24,13 @@
       @click="cooldown_toggle()"
       class="btn btn-yellow-ability opacity-70"
     >
-    <div class="inline">
-      <img
-        src="~/assets/cooldown-icons/ability.png"
-        class="h-5"
-      /><!--Sæt den til venstre for teksten og gør den mindre-->
-      COOLDOWN
-      <!--Den gider ikke aligne teksten??-->
+      <div class="inline block">
+        <img
+          src="~/assets/cooldown-icons/ability.png"
+          class="h-5"
+        /><!--Sæt den til venstre for teksten og gør den mindre-->
+        COOLDOWN
+        <!--Den gider ikke aligne teksten??-->
       </div>
     </button>
 
@@ -39,10 +39,13 @@
       @click="stun_toggle()"
       class="btn btn-yellow-ability opacity-70"
     >
-      <img
-        src="~/assets/stun-icons/stun.png"
-      /><!--Sæt den til venstre for teksten og gør den mindre-->
-      STUN
+      <div class="inline">
+        <img
+          src="~/assets/stun-icons/stun.png"
+          class="h-5"
+        /><!--Sæt den til venstre for teksten og gør den mindre-->
+        STUN
+    </div>
     </button>
 
     <button @click="nextRound_click()" class="btn btn-yellow-ability">
