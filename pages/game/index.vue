@@ -1,5 +1,6 @@
 <template>
-  <h1 class="text-white font-bold text-center mt-5 mb-5 text-xl">
+  <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter bg-gradient-to-b from-white-500 to-black-500">
+    <!-- font-Inter not-italic font-bold text-3xl leading-7 absolute top-35 mx-0 bg-gradient-to-b from-white-500 to-grey-500 -->
     BATTLE ARENA
   </h1>
   <p class="text-white text-center">ROUND: {{ this.roundCounter }}</p>
@@ -23,11 +24,14 @@
       @click="cooldown_toggle()"
       class="btn btn-yellow-ability opacity-70"
     >
+    <div class="inline">
       <img
         src="~/assets/cooldown-icons/ability.png"
+        class="h-5"
       /><!--Sæt den til venstre for teksten og gør den mindre-->
       COOLDOWN
       <!--Den gider ikke aligne teksten??-->
+      </div>
     </button>
 
     <button

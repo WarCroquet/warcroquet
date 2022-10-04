@@ -28,7 +28,7 @@ body {
   }
 
   .btn-yellow-ability {
-    @apply text-green-1200 pr-10 pl-10 pt-4 pb-4 mr-2 rounded-lg shadow-xl bg-gradient-to-b from-yellow-1100 to-yellow-1200 font-extrabold text-lg w-36 mt-4;
+    @apply text-green-1200 pr-10 pl-10 pt-4 pb-4 mr-2 rounded-lg shadow-xl bg-gradient-to-b from-yellow-1100 to-yellow-1200 font-extrabold text-lg w-36 h-10 mt-4;
     &:hover {
       @apply bg-yellow-400;
     }
