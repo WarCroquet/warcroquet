@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col align-items">
-    <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter bg-gradient-to-b from-white-500 to-black-500">
+    <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter text-white">
       <!-- font-Inter not-italic font-bold text-3xl leading-7 absolute top-35 mx-0 bg-gradient-to-b from-white-500 to-grey-500 -->
       BATTLE ARENA
     </h1>
