@@ -1,36 +1,40 @@
 <template>
-  <div>
-    <h3>NEW GAME</h3>
+  <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center">
+      <h3 class="text-green-1100 font-bold">NEW GAME</h3>
 
-    <label>Number of players</label>
-    <select
-      id="testSelect"
-      class="select"
-      v-model.number="playerCount"
-      @change="updatePlayerCount(settings, playerCount)"
-    >
-      <option disabled selected value="0">Select players</option>
-      <option
-        :key="playerNum"
-        v-for="playerNum in allowedPlayerCount"
-        :value="playerNum"
+      <label class="m-auto text-2xl font-bold my-2">NUMBER OF PLAYERS</label>
+      <select
+        id="testSelect"
+        class="select"
+        v-model.number="playerCount"
+        @change="updatePlayerCount(settings, playerCount)"
       >
-        {{ playerNum }} Player{{ playerNum > 1 ? "s" : "" }}
-      </option>
-    </select>
+        <option class="option" disabled selected value="0">SELECT</option>  
+        <option class="option"
+          :key="playerNum"
+          v-for="playerNum in allowedPlayerCount"
+          :value="playerNum"
+        >
+          {{ playerNum }} PLAYER{{ playerNum > 1 ? "S" : "" }}
+        </option>
+      </select>
 
-    <br /><br />
-    <label>Allow duplicate classes</label>
-    <input
-      type="checkbox"
-      id="allowDuplicateClasses"
-      v-model="checked"
-      @change="allowDuplicateClasses(settings, checked)"
-    />
-  </div>
+      <!--<br /><br />-->
+      <div class="my-8">
+        <label class="mx-2">Allow duplicate classes</label>
+        <input
+          type="checkbox"
+          id="allowDuplicateClasses"
+          v-model="checked"
+          @change="allowDuplicateClasses(settings, checked)"
+        />
+      </div>
+    </div>
 
-  <div class="link">
-    <button class="btn btn-yellow" @click="onNext(settings)">next</button>
+    <div class="link">
+      <button class="btn btn-yellow" @click="onNext(settings)">next</button>
+    </div>
   </div>
 </template>
 

@@ -50,5 +50,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px 0px;
     width: 70%;
   }
+
+  .select {
+    @apply bg-green-100 rounded-lg w-full h-12;
+  }
+
+  .option {
+    @apply text-black;
+  }
 }
 </style>
