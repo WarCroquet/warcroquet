@@ -1,8 +1,8 @@
 <template>
-  <div class="containerPaddingComponent">
+  <div class="containerPaddingComponent py-4">
     <div
       :id="playerName + '-playercolor-ring'"
-      class="relative w-28 h-28 rounded-full -z-10 shadow-warCircle"
+      class="relative w-28 h-28 rounded-full -z-10 shadow-warCircle m-auto"
       :style="{ backgroundColor: playerColor }"
     >
       <div
@@ -102,6 +102,7 @@ export default {
 <style lang="scss">
 .containerPaddingComponent {
   @apply px-7;
+  @apply basis-5/12;
 }
 </style>
 

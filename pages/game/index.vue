@@ -1,56 +1,58 @@
 <template>
-  <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter bg-gradient-to-b from-white-500 to-black-500">
-    <!-- font-Inter not-italic font-bold text-3xl leading-7 absolute top-35 mx-0 bg-gradient-to-b from-white-500 to-grey-500 -->
-    BATTLE ARENA
-  </h1>
-  <p class="text-white text-center">ROUND: {{ this.roundCounter }}</p>
+  <div class="flex flex-col align-items">
+    <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter bg-gradient-to-b from-white-500 to-black-500">
+      <!-- font-Inter not-italic font-bold text-3xl leading-7 absolute top-35 mx-0 bg-gradient-to-b from-white-500 to-grey-500 -->
+      BATTLE ARENA
+    </h1>
+    <p class="text-white text-center">ROUND: {{ this.roundCounter }}</p>
 
-  <div class="flex flex-wrap text-white justify-center mt-4">
-    <PlayerTemplate
-      v-for="player in this.players"
-      :key="player"
-      :playerColor="player.ColorHex"
-      :playerClass="player.Class.Name"
-      :playerName="player.Name"
-      :stunIcon="player.StunIcon"
-      :abilityIcon="player.CooldownIcon"
-      @click="player_click(player)"
-    />
-  </div>
-
-  <div class="flex flex-wrap justify-center">
-    <button
-      id="cooldownBtn"
-      @click="cooldown_toggle()"
-      class="btn btn-yellow-ability opacity-70"
-    >
-      <div class="inline block">
-        <img
-          src="~/assets/cooldown-icons/ability.png"
-          class="h-5"
-        /><!--Sæt den til venstre for teksten og gør den mindre-->
-        COOLDOWN
-        <!--Den gider ikke aligne teksten??-->
-      </div>
-    </button>
-
-    <button
-      id="stunBtn"
-      @click="stun_toggle()"
-      class="btn btn-yellow-ability opacity-70"
-    >
-      <div class="inline">
-        <img
-          src="~/assets/stun-icons/stun.png"
-          class="h-5"
-        /><!--Sæt den til venstre for teksten og gør den mindre-->
-        STUN
+    <div class="flex flex-wrap text-white justify-center mt-4">
+      <PlayerTemplate
+        v-for="player in this.players"
+        :key="player"
+        :playerColor="player.ColorHex"
+        :playerClass="player.Class.Name"
+        :playerName="player.Name"
+        :stunIcon="player.StunIcon"
+        :abilityIcon="player.CooldownIcon"
+        @click="player_click(player)"
+      />
     </div>
-    </button>
 
-    <button @click="nextRound_click()" class="btn btn-yellow-ability">
-      NEXT ROUND
-    </button>
+    <div class="flex flex-wrap justify-center bg-green-800 m-auto py-4 px-4 rounded-lg">
+      <button
+        id="cooldownBtn"
+        @click="cooldown_toggle()"
+        class="btn btn-yellow-ability opacity-70"
+      >
+        <div class="flex flex-row justify-center">
+          <img
+            src="~/assets/cooldown-icons/ability.png"
+            class="h-5 px-1 my-auto"
+          /><!--Sæt den til venstre for teksten og gør den mindre-->
+          COOLDOWN
+          <!--Den gider ikke aligne teksten??-->
+        </div>
+      </button>
+
+      <button
+        id="stunBtn"
+        @click="stun_toggle()"
+        class="btn btn-yellow-ability opacity-70"
+      >
+        <div class="flex flex-row justify-center">
+          <img
+            src="~/assets/stun-icons/stun.png"
+            class="h-5 px-1 my-auto"
+          /><!--Sæt den til venstre for teksten og gør den mindre-->
+          STUN
+      </div>
+      </button>
+
+      <button @click="nextRound_click()" class="btn btn-yellow-ability">
+        NEXT ROUND
+      </button>
+    </div>
   </div>
 </template>
 
