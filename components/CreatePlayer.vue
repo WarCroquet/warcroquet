@@ -1,6 +1,6 @@
 <template>
   <h3>NEW GAME</h3>
-  <h3>Player {{ this.playersCreated }} Data</h3>
+  <h3>Player {{ playersCreated }} Data</h3>
 
   <p>Player name:</p>
   <input id="playerName" style="color: black" /><br /><br />
@@ -29,14 +29,12 @@
     </option></select
   ><br /><br />
 
-  <h2>
-    Player {{ this.playersCreated }} of {{ this.gameSettings.PlayerCount }}
-  </h2>
+  <h2>Player {{ playersCreated }} of {{ gameSettings.PlayerCount }}</h2>
   <div class="link">
     <button
       class="btn btn-yellow"
       @click="createPlayer(chosenName(), _class, _color)"
-      v-if="this.gameSettings.PlayerCount == 1"
+      v-if="gameSettings.PlayerCount == 1"
     >
       Start Game
     </button>

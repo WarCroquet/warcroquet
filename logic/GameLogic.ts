@@ -21,77 +21,71 @@ function GetClasses(): Promise<Class[]> {
 function GetWarrior(): Class {
 	return new Class(
 		"Warrior",
-		new Ability(3, false, "Dual wield", "Du slår to gange med én enkelt hånd på køllen."),
-		new Ability(0, true, "Enrage", "Resetter CD på dual wield, når du kommer igennem en gate, hvis den er på CD i forvejen.")
+		new Ability(3, false, "Dual Wield", "The player can hit two times with only one hand on the club."),
+		new Ability(0, true, "Enrage", "If Dual Wield is on cooldown and the player gets through a gate, the cooldown on Dual Wield is reset.")
 	)
 }
 function GetWarlock(): Class {
 	return new Class(
 		"Warlock",
-		new Ability(0, false, "Demonic gateway", "Man skal sige “demonic gateway” hvis man bruger ability'en. Kan bruges hvis man er 3/4" +
-			"køller eller mere fra en gate. Kommer du igennem gaten, må du rykke til den næste gate og det" +
-			"tæller som at du har været igennem dem begge. Kommer man ikke igennem gaten, er man stunned i 2 runder."),
+		new Ability(0, false, "Demonic gateway", "The player can use this ability, if they are 3/4 clubs or more away from a gate. If the player succeeds in shooting their own ball through the gate, the player can move their ball to the next gate, and it counts as having shot through both gates. If the player is unsuccessful, they are instead stunned for two rounds. To use this ability, the player needs to say \"DEMONIC GATEWAY\" before taking the shot."),
 		null
 	)
 }
 function GetShaman(): Class {
 	return new Class(
 		"Shaman",
-		new Ability(2, false, "Capacitator totem", "Du kan placere et totem og stunne alle inden for en hel kølles range af " +
-			"dette totem for 1 runde. Totem bliver stående, indtil ability'en bruges igen."),
+		new Ability(2, false, "Capacitator totem", "The player can place a totem and stun all opponents within a whole clubs range of the totem. The stun lasts for one round. After the ability is used, the totem remains as an obstacle, until the ability is used again."),
 		null
 	)
 }
 function GetRogue(): Class {
 	return new Class(
 		"Rogue",
-		new Ability(2, false, "Sabotage", "Du må skyde en valgfri kugle væk, som i normale kroket regler."),
-		new Ability(0, true, "Stealth", "Kan ikke blive rykket af andres almindelige skud.")
+		new Ability(2, false, "Sabotage", "The player can shoot an opponent away. This is done in the same manner as when two balls a touching in the standard game of croquet."),
+		new Ability(0, true, "Stealth", "The player cannot be moved by opponent's shots.")
 	)
 }
 function GetPriest(): Class {
 	return new Class(
 		"Priest",
-		new Ability(0, false, "Leap of Faith", "Du kan tage dit skud om. Tages skuddet om, gælder det andet skud."),
+		new Ability(0, false, "Leap of Faith", "The player can retake their shot. If a player retakes a shot, the first shot is disregarded."),
 		null
 	)
 }
 function GetPaladin(): Class {
 	return new Class(
 		"Paladin",
-		new Ability(1, false, "Hammer of Justice", "Stun en valgfri spiller for 1 runde. Kan ikke bruges på den samme spiller to gange i streg."),
-		new Ability(0, true, "Divine Shield", "Du kan ikke blive stunned.")
+		new Ability(1, false, "Hammer of Justice", "Stun an opponent for one turn. This ability cannot be used on the same player twice in a row."),
+		new Ability(0, true, "Divine Shield", "This player cannot be stunned.")
 	)
 }
 function GetMage(): Class {
 	return new Class(
 		"Mage",
-		new Ability(2, false, "Blink", "(3 hele køllers range.) Flyt din kugle op til 3 hele køller i en valgfri retning. Tæller som skud." +
-			" Din kugle kan ikke blive rykket på indtil det er din tur igen. Du kan ikke blink igennem en gate."),
+		new Ability(2, false, "Blink", "Three whole clubs range. The player can move their ball up to three whole clubs in any direction. The player's ball cannot be affected by any opponents until the next turn. You cannot blink through a gate. This ability counts as a shot."),
 		null
 	)
 }
 function GetHunter(): Class {
 	return new Class(
 		"Hunter",
-		new Ability(2, false, "Aimed shot", "Kan skyde en ekstra gang med den modsatte ende af staven (billiard skud)."),
+		new Ability(2, false, "Aimed shot", "The player is able to shoot an extra time with the opposite end of the club, also known as a billiard shot."),
 		null
 	)
 }
 function GetDeathKnight(): Class {
 	return new Class(
 		"Death Knight",
-		new Ability(2, false, "Death grip", "(3 hele køllers range) Træk en modstanders kugle hen til dig. Kuglen skal placeres" +
-			" på den side som kuglen oprindeligt var i forhold til din kugle."),
-		new Ability(0, true, "Anti-magic zone", "(lille 1/2 kølles range) Ingen kan bruge abilities hvis de er inde i zonen.")
+		new Ability(2, false, "Death grip", "Three whole clubs range. Pull an opponent to the player. The opponent is placed beside the player, on the same side as the opponent's original position."),
+		new Ability(0, true, "Anti-magic zone", "All opponents within a small 1/2 club range of the player, are unable to use any abilities.")
 	)
 }
 function GetDruid(): Class {
 	return new Class(
 		"Druid",
-		new Ability(2, false, "Bear form or Moonkin form", "Bear form: (Global range) Charge til en selvvalgt spiller. Man kan ikke gå igennem gates med den." +
-			" | Moonkin form: (En hel kølles range) Alle inden for en kølles range af en selv bliver skubbet en kølle væk fra deres position i den vinkel" +
-			" de har i forhold til en selv. De deler CD."),
+		new Ability(2, false, "Bear form or Moonkin form", "Bear Form - Charge. Global range. Charge to any opponent of your choice. The player cannot pass through a gate doing so. Shares cooldown with Moonkin Form." +
+			" | Moonkin Form - Typhoon. One whole club range. All balls within a whole club's range of the player are moved one whole club away from their current position such that the angle to the player stays the same. Shares cooldown with Bear Form."),
 		null
 	)
 }
