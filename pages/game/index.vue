@@ -1,10 +1,29 @@
 <template>
   <div class="flex flex-col items-center">
-    <h1 class="font-bold text-center mt-5 mb-5 text-4xl font-Inter text-white">
-      <!-- font-Inter not-italic font-bold text-3xl leading-7 absolute top-35 mx-0 bg-gradient-to-b from-white-500 to-grey-500 -->
+    <h1 
+      class="font-bold text-center mt-5 text-4xl font-Inter text-white"
+      style="
+          background: linear-gradient(180deg, #FFFFFF 0%, #9D9D9D 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+      "
+    >
       BATTLE ARENA
     </h1>
-    <p class="text-white text-center">ROUND: {{ this.roundCounter }}</p>
+    <p 
+      class="text-white text-center font-bold"
+      style="
+          background: linear-gradient(180deg, #FFFFFF 0%, #9D9D9D 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+      "
+      >
+      ROUND: {{ this.roundCounter }}
+    </p>
 
     <div class="flex flex-wrap text-white justify-center mt-4">
       <PlayerTemplate
@@ -19,7 +38,9 @@
       />
     </div>
 
-    <div class="flex flex-wrap justify-center bg-green-800 m-auto py-4 px-4 rounded-lg">
+    <div 
+      class="flex flex-wrap justify-center py-4 px-4 rounded-lg m-4"
+      style="background-color: rgba(2, 58, 43, 0.44);">
       <button
         id="cooldownBtn"
         @click="cooldown_toggle()"
@@ -29,9 +50,8 @@
           <img
             src="~/assets/cooldown-icons/ability.png"
             class="h-5 px-1 my-auto"
-          /><!--Sæt den til venstre for teksten og gør den mindre-->
+          />
           COOLDOWN
-          <!--Den gider ikke aligne teksten??-->
         </div>
       </button>
 
@@ -44,7 +64,7 @@
           <img
             src="~/assets/stun-icons/stun.png"
             class="h-5 px-1 my-auto"
-          /><!--Sæt den til venstre for teksten og gør den mindre-->
+          />
           STUN
       </div>
       </button>
